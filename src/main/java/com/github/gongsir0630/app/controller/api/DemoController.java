@@ -24,7 +24,7 @@ import java.util.List;
 @RestController
 @Api(tags = "demo-接口文档实例")
 @Slf4j
-@RequestMapping("api/demo")
+@RequestMapping("/demo")
 public class DemoController {
 
     @Resource

@@ -1,15 +1,11 @@
 package com.github.gongsir0630.app.model;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.util.Date;
 
 /**
  * @author <a href="https://github.com/gongsir0630">码之泪殇</a>
@@ -21,15 +17,26 @@ import java.util.Date;
 @Data
 @ApiModel("用户信息")
 public class User {
-  @TableId(value = "username",type = IdType.INPUT)
-  @ApiModelProperty("用户账号")
-  private String username;
-  @ApiModelProperty("用户密码")
-  private String password;
-  @ApiModelProperty("真实姓名")
-  private String realName;
-  @ApiModelProperty("登陆时间")
-  @DateTimeFormat(pattern = "yyyy-MM-dd")
-  @JSONField(format = "yyyy-MM-dd")
-  private Date loginTime;
+    @TableId(value = "username", type = IdType.INPUT)
+    @ApiModelProperty("主键,手机号")
+    private String phoneNumber;
+    @ApiModelProperty("用户名")
+    private String username;
+    @ApiModelProperty("级别")
+    private String level;
+    @ApiModelProperty("当前套餐")
+    private String userMeal;
+    @ApiModelProperty("网龄")
+    private String age;
+    @ApiModelProperty("星级")
+    private String star;
+    @ApiModelProperty("有效期")
+    private String time;
+    @ApiModelProperty("用户状态")
+    private String status;
+    @ApiModelProperty("入网时间")
+    private String date;
+    @ApiModelProperty("实名认证")
+    private String auth;
+
 }
