@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: java-app-template
+  # 配置文件环境
+  profiles:
+    active: '@profile.active@'
+
+# 设置日志级别
+logging:
+  level:
+    org.springframework.web: info
+    top.yzhelp.campus: debug
+
+jwt:
+    secret: com.github.gongsir0630

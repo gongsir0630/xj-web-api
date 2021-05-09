@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "token 签名串."
+  }
+] }
