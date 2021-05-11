@@ -3,6 +3,11 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+cookie
+coike.txt
+ghostdriver.log
+url.txt
+venv
 
 ### STS ###
 .apt_generated
