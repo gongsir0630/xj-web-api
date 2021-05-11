@@ -1,29 +1,22 @@
-# java-app-template
+# xj-web-api
 
-## 介绍
+## 运行
+* 需要 jdk 环境
+* 需要 mvn 环境, 安装参考: [https://www.cnblogs.com/liuhongfeng/p/5057827.html](https://www.cnblogs.com/liuhongfeng/p/5057827.html)
 
-基于 [Spring Boot] 搭建的 Java 后端基础开发环境, 整合了以下常用技术栈:
+```shell
+# 克隆项目
+git clone https://github.com/gongsir0630/xj-web-api.git
 
-* fastjson -> 阿里巴巴 json 处理框架
-  
-* druid/MySQL -> 基于 MySQL 数据库, 使用阿里巴巴的 Druid 连接池
-  
-* [MyBatis-Plus](https://baomidou.com/) -> MyBatis 增强
-  
-* Shiro/JWT -> 认证鉴权
-  
-* Swagger -> 接口文档
-  
-* 七牛云 -> 对象存储
-  
-* [Hutool](https://www.hutool.cn/) -> Java 工具类
-  
-* Lombok -> 简化开发
-  
-* 多环境配置, 指定环境动态切换配置文件
+# Windows 平台
+# 将 phantomJS 安装包加入到项目 scripts 目录下
+# 修改 python 脚本中 driver 路径
 
-## 使用
+# 启动项目
+cd xj-web-api
+mvn spring-boot:run
 
-* 直接 fork 项目二次开发即可
+```
 
-* 打包时通过 `-P` 参数指定打包环境: `mvn clean package -Ppro -Dmaven.test.skip=true`
+## swagger 地址
+[http://localhost:8082/swagger-ui.html](http://localhost:8082/swagger-ui.html)
