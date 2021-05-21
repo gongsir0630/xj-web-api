@@ -9,7 +9,7 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-# -*- codeing = utf-8 -*-
+# -*- coding: utf-8 -*
 # @time : 2021/3/19 21:18
 # @Author : WYJ
 # @File : 测试函数2.py

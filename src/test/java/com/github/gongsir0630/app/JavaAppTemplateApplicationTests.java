@@ -22,12 +22,29 @@ class JavaAppTemplateApplicationTests {
     }
 
     @Test
+    void testPy() {
+        try {
+            Process process = Runtime.getRuntime().exec("python /Users/gongsir/Desktop/cj/xj-web-api/scripts/test.py");
+            BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = in.readLine()) != null) {
+                System.out.println(line);
+            }
+            in.close();
+            int res = process.waitFor();
+            System.out.println(res);
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     void contextLoads() {
         String phone = "15775828083";
         Runtime runtime = Runtime.getRuntime();
         List<String> result = new ArrayList<>();
         String currentPath = System.getProperty("user.dir");
-        String cmd = "python " + currentPath + "/scripts/send_key.py " + phone;
+        String cmd = "/Users/gongsir/.pyenv/versions/3.8.0/bin/python3.8  " + currentPath + "/scripts/send_key.py " + phone;
         log.info(cmd);
         try {
             Process process = runtime.exec(cmd);
@@ -38,7 +55,8 @@ class JavaAppTemplateApplicationTests {
                 System.out.println(line);
             }
             in.close();
-            process.waitFor();
+            int res = process.waitFor();
+            System.out.println(res);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

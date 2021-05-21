@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*
+
 import requests
 import sys
 import io
@@ -14,7 +16,7 @@ def login(mobile, yanzhengma):
     dcap["phantomjs.page.settings.userAgent"] = user_agent
 
     # browser = webdriver.PhantomJS('phantomjs-2.1.1-windows/phantomjs-2.1.1-windows/bin/phantomjs.exe')
-    browser = webdriver.PhantomJS()
+    browser = webdriver.PhantomJS('/usr/local/bin/phantomjs')
 
     url = r'https://login.10086.cn/login.html?channelID=12034&backUrl=http%3A%2F%2Fwww.10086.cn%2Findex%2Fsc%2Findex_280_817.html%3FWT.mc_id%3Dj4cjLiavhrFcg0AFIYX5_RuifvL8JGtflKh3Cq3zd1619242836.742wm0x171d88o78t165xm0w'
     # 访问登录页面

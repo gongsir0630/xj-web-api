@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*
+
 import requests
 import sys
 import io
@@ -16,7 +18,7 @@ def send(mobile):
     #                              desired_capabilities=dcap)
     # browser =webdriver.Chrome(r"C:\Users\Administrator\Downloads\chromedriver_win32 (4)\chromedriver.exe",chrome_options=options)
     # browser = webdriver.PhantomJS('phantomjs-2.1.1-windows/phantomjs-2.1.1-windows/bin/phantomjs.exe')
-    browser = webdriver.PhantomJS()
+    browser = webdriver.PhantomJS('/usr/local/bin/phantomjs')
 
     # 登录页面
     url = r'https://login.10086.cn/login.html?channelID=12034&backUrl=http%3A%2F%2Fwww.10086.cn%2Findex%2Fsc%2Findex_280_817.html%3FWT.mc_id%3Dj4cjLiavhrFcg0AFIYX5_RuifvL8JGtflKh3Cq3zd1619242836.742wm0x171d88o78t165xm0w'
@@ -50,4 +52,5 @@ def send(mobile):
 if __name__ == '__main__':
     # mobile = input('输入手机号')
     mobile = int(sys.argv[1])
+    print(mobile)
     send(mobile)
